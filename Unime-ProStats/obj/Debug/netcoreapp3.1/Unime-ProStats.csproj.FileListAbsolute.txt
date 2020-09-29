@@ -1,0 +1,17 @@
+C:\Users\Host\source\repos\UnimeSearch\Unime-ProStats\bin\Debug\netcoreapp3.1\Unime-ProStats.exe
+C:\Users\Host\source\repos\UnimeSearch\Unime-ProStats\bin\Debug\netcoreapp3.1\Unime-ProStats.deps.json
+C:\Users\Host\source\repos\UnimeSearch\Unime-ProStats\bin\Debug\netcoreapp3.1\Unime-ProStats.runtimeconfig.json
+C:\Users\Host\source\repos\UnimeSearch\Unime-ProStats\bin\Debug\netcoreapp3.1\Unime-ProStats.runtimeconfig.dev.json
+C:\Users\Host\source\repos\UnimeSearch\Unime-ProStats\bin\Debug\netcoreapp3.1\Unime-ProStats.dll
+C:\Users\Host\source\repos\UnimeSearch\Unime-ProStats\bin\Debug\netcoreapp3.1\Unime-ProStats.pdb
+C:\Users\Host\source\repos\UnimeSearch\Unime-ProStats\obj\Debug\netcoreapp3.1\Unime-ProStats.csprojAssemblyReference.cache
+C:\Users\Host\source\repos\UnimeSearch\Unime-ProStats\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\Host\source\repos\UnimeSearch\Unime-ProStats\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\Host\source\repos\UnimeSearch\Unime-ProStats\obj\Debug\netcoreapp3.1\Unime-ProStats_MarkupCompile.cache
+C:\Users\Host\source\repos\UnimeSearch\Unime-ProStats\obj\Debug\netcoreapp3.1\Unime-ProStats_MarkupCompile.lref
+C:\Users\Host\source\repos\UnimeSearch\Unime-ProStats\obj\Debug\netcoreapp3.1\Unime-ProStats.AssemblyInfoInputs.cache
+C:\Users\Host\source\repos\UnimeSearch\Unime-ProStats\obj\Debug\netcoreapp3.1\Unime-ProStats.AssemblyInfo.cs
+C:\Users\Host\source\repos\UnimeSearch\Unime-ProStats\obj\Debug\netcoreapp3.1\Unime-ProStats.dll
+C:\Users\Host\source\repos\UnimeSearch\Unime-ProStats\obj\Debug\netcoreapp3.1\Unime-ProStats.pdb
+C:\Users\Host\source\repos\UnimeSearch\Unime-ProStats\obj\Debug\netcoreapp3.1\Unime-ProStats.genruntimeconfig.cache
+C:\Users\Host\source\repos\UnimeSearch\Unime-ProStats\obj\Debug\netcoreapp3.1\Unime-ProStats.csproj.CoreCompileInputs.cache
