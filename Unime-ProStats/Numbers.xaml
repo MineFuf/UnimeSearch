@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=System.Runtime"
+                    xmlns:local="clr-namespace:Unime_ProStats">
+    <CornerRadius x:Key="BorderRadius">5</CornerRadius>
+    <CornerRadius x:Key="BorderRadiusCard">5 5 0 0</CornerRadius>
+    <Thickness x:Key="MarginSameRadius">5</Thickness>
+</ResourceDictionary>

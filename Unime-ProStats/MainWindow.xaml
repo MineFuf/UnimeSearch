@@ -6,159 +6,16 @@
         xmlns:local="clr-namespace:Unime_ProStats"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
-        xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit">
+        xmlns:wpfTool="clr-namespace:Xceed.Wpf.Toolkit;assembly=Xceed.Wpf.Toolkit"
+        Name="MainWin" Closing="MainWinClosing">
 
 
     <Window.Resources>
-        <DropShadowEffect x:Key="shadowButton" BlurRadius="5" Color="#A954C7" Direction="270" ShadowDepth="0"/>
-        <Style TargetType="Button" x:Key="ButtonBase">
-            <Style.Resources>
-            </Style.Resources>
-            <Setter Property="Effect" Value="{StaticResource shadowButton}"/>
-        </Style>
-        <Style TargetType="Button" x:Key="ButtonImportant" BasedOn="{StaticResource ButtonBase}">
-            <Style.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="10" />
-                    <Setter Property="BorderThickness" Value="0"/>
-                    <Setter Property="BorderBrush" Value="Black"/>
-                </Style>
-            </Style.Resources>
-            <Setter Property="Background" Value="{StaticResource ImportantButtonColor}"/>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="true">
-                    <Setter Property="Background" Value="{StaticResource ImportantButtonColorHover}"/>
-                </Trigger>
-            </Style.Triggers>
-        </Style>
-        <Style TargetType="Grid" x:Key="BorderGrid">
-            <Style.Resources>
-            </Style.Resources>
-        </Style>
-        <Style x:Key="ScrollThumbs" TargetType="{x:Type Thumb}">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Thumb}">
-                        <Grid x:Name="Grid">
-                            <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" Fill="Transparent" />
-                            <Border x:Name="Rectangle1" CornerRadius="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto"  Background="{TemplateBinding Background}" />
-                        </Grid>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="Tag" Value="Horizontal">
-                                <Setter TargetName="Rectangle1" Property="Width" Value="Auto" />
-                                <Setter TargetName="Rectangle1" Property="Height" Value="7" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
 
-        <!--ScrollBars-->
-        <Style x:Key="{x:Type ScrollBar}" TargetType="{x:Type ScrollBar}">
-            <Setter Property="Stylus.IsFlicksEnabled" Value="false" />
-            <Setter Property="Foreground" Value="{StaticResource Layer2Color}" />
-            <Setter Property="Background" Value="Transparent" />
-            <Setter Property="Width" Value="8" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type ScrollBar}">
-                        <Grid x:Name="GridRoot" Width="8" Background="{TemplateBinding Background}">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="0.00001*" />
-                            </Grid.RowDefinitions>
-
-                            <Track x:Name="PART_Track" Grid.Row="0" IsDirectionReversed="true" Focusable="false">
-                                <Track.Thumb>
-                                    <Thumb x:Name="Thumb" Background="{TemplateBinding Foreground}" Style="{DynamicResource ScrollThumbs}" />
-                                </Track.Thumb>
-                                <Track.IncreaseRepeatButton>
-                                    <RepeatButton x:Name="PageUp" Command="ScrollBar.PageDownCommand" Opacity="0" Focusable="false" />
-                                </Track.IncreaseRepeatButton>
-                                <Track.DecreaseRepeatButton>
-                                    <RepeatButton x:Name="PageDown" Command="ScrollBar.PageUpCommand" Opacity="0" Focusable="false" />
-                                </Track.DecreaseRepeatButton>
-                            </Track>
-                        </Grid>
-
-                        <ControlTemplate.Triggers>
-                            <Trigger SourceName="Thumb" Property="IsMouseOver" Value="true">
-                                <Setter Value="{DynamicResource ButtonSelectBrush}" TargetName="Thumb" Property="Background" />
-                            </Trigger>
-                            <Trigger SourceName="Thumb" Property="IsDragging" Value="true">
-                                <Setter Value="{DynamicResource DarkBrush}" TargetName="Thumb" Property="Background" />
-                            </Trigger>
-
-                            <Trigger Property="IsEnabled" Value="false">
-                                <Setter TargetName="Thumb" Property="Visibility" Value="Collapsed" />
-                            </Trigger>
-                            <Trigger Property="Orientation" Value="Horizontal">
-                                <Setter TargetName="GridRoot" Property="LayoutTransform">
-                                    <Setter.Value>
-                                        <RotateTransform Angle="-90" />
-                                    </Setter.Value>
-                                </Setter>
-                                <Setter TargetName="PART_Track" Property="LayoutTransform">
-                                    <Setter.Value>
-                                        <RotateTransform Angle="-90" />
-                                    </Setter.Value>
-                                </Setter>
-                                <Setter Property="Width" Value="Auto" />
-                                <Setter Property="Height" Value="8" />
-                                <Setter TargetName="Thumb" Property="Tag" Value="Horizontal" />
-                                <Setter TargetName="PageDown" Property="Command" Value="ScrollBar.PageLeftCommand" />
-                                <Setter TargetName="PageUp" Property="Command" Value="ScrollBar.PageRightCommand" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style x:Key="{x:Type ToggleButton}" TargetType="{x:Type ToggleButton}">
-            <Setter Property="BorderThickness" Value="0"/>
-            <Setter Property="Background" Value="{StaticResource Layer2Color}"/>
-            <Style.Resources>
-                <Style TargetType="Border">
-                    <Setter Property="CornerRadius" Value="5"/>
-                </Style>
-                <Style TargetType="TextBlock">
-                    <Setter Property="Foreground" Value="White"/>
-                </Style>
-            </Style.Resources>
-        </Style>
-        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
-        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
-        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
-        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
-        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
-        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
-        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
-        <ControlTemplate x:Key="ImportantButton" TargetType="{x:Type ButtonBase}">
-            <Border x:Name="border" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" BorderBrush="{TemplateBinding BorderBrush}" SnapsToDevicePixels="true">
-                <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-            </Border>
-            <ControlTemplate.Triggers>
-                <Trigger Property="Button.IsDefaulted" Value="true">
-                    <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
-                </Trigger>
-                <Trigger Property="IsMouseOver" Value="true">
-                    <Setter Property="Background" TargetName="border" Value="{StaticResource ImportantButtonColorHover}"/>
-                </Trigger>
-                <Trigger Property="IsPressed" Value="true">
-                    <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
-                    <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
-                </Trigger>
-                <Trigger Property="IsEnabled" Value="false">
-                    <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
-                    <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
-                    <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
-                </Trigger>
-            </ControlTemplate.Triggers>
-        </ControlTemplate>
     </Window.Resources>
     <Grid Background="{StaticResource BackgroundColor}">
         <ScrollViewer VerticalScrollBarVisibility="Visible" Margin="0 20 0 20">
-            <Grid Height="1000" Margin="40 0 40 0">
+            <Grid Margin="40 0 40 0" MaxWidth="1200">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition/>
@@ -174,7 +31,7 @@
                             <ColumnDefinition />
                             <ColumnDefinition Width="200"/>
                         </Grid.ColumnDefinitions>
-                        <wpfTool:WatermarkTextBox
+                        <wpfTool:WatermarkTextBox x:Name="ProfileName_TxtBx"
                             Watermark="Profile Name"
                             Foreground="White"
                             Grid.Column="0"
@@ -185,33 +42,111 @@
                             BorderThickness="0"
                             FontSize="20"
                             CaretBrush="White"/>
-                        <Button Template="{DynamicResource ImportantButton}" Style="{StaticResource ButtonImportant}"
+                        <Button x:Name="Load_Btn" Template="{DynamicResource ImportantButton}" Style="{StaticResource ButtonImportant}"
                             Grid.Column="1"
                             BorderThickness="0"
                             HorizontalAlignment="Stretch"
                             VerticalAlignment="Stretch"
-                            Margin="0 0 0 0">
+                            Margin="0 0 0 0" Click="LoadBtn_Click">
                             <TextBlock Text="Load Profile" Foreground="#121212" FontSize="20"/>
                         </Button>
                     </Grid>
                 </Border>
+                <!--
                 <Border
                     Grid.Row="1"
                     CornerRadius="10"
                     Background="{StaticResource Layer2Color}">
                     <Grid>
-                        <StackPanel Orientation="Horizontal" Height="30" VerticalAlignment="Top">
-                            <ToggleButton>
-                                <TextBlock Text="Show"/>
-                            </ToggleButton>
-                            <TextBlock
-                                Text="Anime List"
-                                Foreground="White"
-                                FontSize="18"
-                                Margin="10 10 0 0"/>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                            -->
+                <Border VerticalAlignment="Top" Padding="5" CornerRadius="{StaticResource BorderRadius}" Grid.Row="1" Background="{StaticResource Layer2Color}">
+                    <StackPanel>
+                        <Expander Name="ExpanderAnimeList"
+                        HorizontalAlignment="Stretch" VerticalAlignment="Top"
+                        ExpandDirection="Down"
+                        Template="{StaticResource Template1}"
+                        Grid.Row="1"
+                        BorderBrush="{x:Null}"
+                        Header="Anime List"
+                        Foreground="White"
+                        FontSize="18"
+                        IsExpanded="True"
+                        Margin="{StaticResource MarginSameRadius}">
+                            <StackPanel>
+
+                                <WrapPanel FlowDirection="LeftToRight" Orientation="Horizontal" HorizontalAlignment="Center">
+                                    <Border Background="{StaticResource Layer3Color}"
+                                        CornerRadius="{StaticResource BorderRadius}"
+                                        Padding="5" Margin="5">
+                                        <StackPanel TextBlock.FontSize="15">
+                                            <TextBlock Text="Sort Direction" Foreground="White" FontSize="16" FontWeight="Bold"/>
+                                            <RadioButton IsChecked="True" x:Name="Ascending_RB" Style="{StaticResource MaterialDesignRadioButton}" Checked="FilterChanged">
+                                                <TextBlock Text="Ascending" Foreground="White"/>
+                                            </RadioButton>
+                                            <RadioButton x:Name="Descending_RB" Style="{StaticResource MaterialDesignRadioButton}" Checked="FilterChanged">
+                                                <TextBlock Text="Descending" Foreground="White"/>
+                                            </RadioButton>
+                                        </StackPanel>
+                                    </Border>
+                                    <Border Background="{StaticResource Layer3Color}"
+                                        CornerRadius="{StaticResource BorderRadius}"
+                                        Padding="5" Margin="5" HorizontalAlignment="Left">
+                                        <StackPanel TextBlock.FontSize="15">
+                                            <TextBlock Text="Title Contains" Foreground="White" FontSize="16" FontWeight="Bold"/>
+                                            <Border Margin="0 3 0 0" Height="30" Width="200" Background="{StaticResource Layer2Color}" CornerRadius="{StaticResource BorderRadius}">
+                                                <wpfTool:WatermarkTextBox x:Name="Keyword_TB" CaretBrush="White" Foreground="White" FontSize="15" Margin="3 2 3 0" Width="200" Background="{x:Null}" BorderThickness="0" Watermark="Keyword" TextChanged="FilterChanged"/>
+                                            </Border>
+                                        </StackPanel>
+                                    </Border>
+                                    <Border Background="{StaticResource Layer3Color}"
+                                        CornerRadius="{StaticResource BorderRadius}"
+                                        Padding="5" Margin="5">
+                                        <StackPanel TextBlock.FontSize="15">
+                                            <TextBlock Text="Sort By" Foreground="White" FontSize="16" FontWeight="Bold"/>
+                                            <RadioButton IsChecked="True" x:Name="Title_RB" Style="{StaticResource MaterialDesignRadioButton}" Checked="FilterChanged">
+                                                <TextBlock Text="Title" Foreground="White"/>
+                                            </RadioButton>
+                                            <RadioButton x:Name="TotalEpisodes_RB" Style="{StaticResource MaterialDesignRadioButton}" Checked="FilterChanged">
+                                                <TextBlock Text="Total Episodes" Foreground="White"/>
+                                            </RadioButton>
+                                            <RadioButton x:Name="WathcedEpisodes_RB" Style="{StaticResource MaterialDesignRadioButton}" Checked="FilterChanged">
+                                                <TextBlock Text="Watched Episodes" Foreground="White"/>
+                                            </RadioButton>
+                                            <RadioButton x:Name="Rating_RB" Style="{StaticResource MaterialDesignRadioButton}" Checked="FilterChanged">
+                                                <TextBlock Text="Rating" Foreground="White"/>
+                                            </RadioButton>
+                                            <RadioButton x:Name="Score_RB" Style="{StaticResource MaterialDesignRadioButton}" Checked="FilterChanged">
+                                                <TextBlock Text="Score" Foreground="White"/>
+                                            </RadioButton>
+                                        </StackPanel>
+                                    </Border>
+                                </WrapPanel>
+                                <ListBox Background="{x:Null}"
+                                     BorderBrush="{x:Null}"
+                                     Margin="10"
+                                     Name="FullAnimeListBox"
+                                     MaxHeight="750"
+                                             HorizontalAlignment="Center"
+                                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                     ScrollViewer.VerticalScrollBarVisibility="Visible"
+                                     ItemTemplate="{StaticResource AnimeItem}"
+                                     ItemsSource="{Binding Path=CurrentProfile.animeList}">
+                                    <ListBox.ItemsPanel>
+                                        <ItemsPanelTemplate>
+                                            <WrapPanel Orientation="Horizontal"/>
+                                        </ItemsPanelTemplate>
+                                    </ListBox.ItemsPanel>
+                                </ListBox>
+                            </StackPanel>
+                        </Expander>
+
+                    </StackPanel>
+                </Border>
+                <!--
                         </StackPanel>
                     </Grid>
-                </Border>
+                </Border> -->
             </Grid>
         </ScrollViewer>
     </Grid>

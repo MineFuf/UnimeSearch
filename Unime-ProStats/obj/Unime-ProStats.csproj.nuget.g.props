@@ -13,6 +13,7 @@
     <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgMaterialDesignThemes Condition=" '$(PkgMaterialDesignThemes)' == '' ">C:\Users\Host\.nuget\packages\materialdesignthemes\3.2.1-ci1990</PkgMaterialDesignThemes>
     <PkgExtended_Wpf_Toolkit Condition=" '$(PkgExtended_Wpf_Toolkit)' == '' ">C:\Users\Host\.nuget\packages\extended.wpf.toolkit\4.0.1</PkgExtended_Wpf_Toolkit>
   </PropertyGroup>
 </Project>

@@ -9,6 +9,8 @@
 
   <ItemGroup>
     <PackageReference Include="Extended.Wpf.Toolkit" Version="4.0.1" />
+    <PackageReference Include="JikanDotNet" Version="1.5.1" />
+    <PackageReference Include="MaterialDesignThemes" Version="3.2.1-ci1990" />
   </ItemGroup>
 
 </Project>

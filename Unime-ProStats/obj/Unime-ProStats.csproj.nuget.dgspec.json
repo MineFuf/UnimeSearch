@@ -47,6 +47,14 @@
             "Extended.Wpf.Toolkit": {
               "target": "Package",
               "version": "[4.0.1, )"
+            },
+            "JikanDotNet": {
+              "target": "Package",
+              "version": "[1.5.1, )"
+            },
+            "MaterialDesignThemes": {
+              "target": "Package",
+              "version": "[3.2.1-ci1990, )"
             }
           },
           "imports": [

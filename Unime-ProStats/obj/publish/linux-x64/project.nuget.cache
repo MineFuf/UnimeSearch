@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "V+ibyVf3FyNZl/oUn0y94gB60jzP7OwXiCLgPbyPKFL/NnS9r7aXLxNDSOwqhoFh2N9WTGBIxXJyYxGnkrAXoA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Host\\source\\repos\\UnimeSearch\\Unime-ProStats\\Unime-ProStats.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Host\\.nuget\\packages\\extended.wpf.toolkit\\4.0.1\\extended.wpf.toolkit.4.0.1.nupkg.sha512",
+    "C:\\Users\\Host\\.nuget\\packages\\microsoft.netcore.app.runtime.linux-x64\\3.1.5\\microsoft.netcore.app.runtime.linux-x64.3.1.5.nupkg.sha512",
+    "C:\\Users\\Host\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\3.1.5\\microsoft.aspnetcore.app.runtime.linux-x64.3.1.5.nupkg.sha512",
+    "C:\\Users\\Host\\.nuget\\packages\\microsoft.netcore.app.host.linux-x64\\3.1.5\\microsoft.netcore.app.host.linux-x64.3.1.5.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Extended.Wpf.Toolkit 4.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "Extended.Wpf.Toolkit",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}

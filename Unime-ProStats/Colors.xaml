@@ -3,6 +3,10 @@
                     xmlns:local="clr-namespace:Unime_ProStats">
     <Brush x:Key="BackgroundColor">#121212</Brush>
     <Brush x:Key="Layer2Color">#232323</Brush>
+    <Brush x:Key="Layer3Color">#343434</Brush>
     <Brush x:Key="ImportantButtonColor">#A954C7</Brush>
     <Brush x:Key="ImportantButtonColorHover">#9254A7</Brush>
+    <Brush x:Key="ImportantButtonColorClick">#A06AB2</Brush>
+    <Brush x:Key="HeaderBackground">#232323</Brush>
+    <Brush x:Key="UsableCyan">#81D6D5</Brush>
 </ResourceDictionary>

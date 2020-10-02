@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "BjQYEmRqJa5mXyBRBEOBe8yt1MgzCXfXNz/yb8mstPlzdV96Vwzp00c68pMlL3hOM+s636BJDkf+mLfbRTwbuQ==",
+  "dgSpecHash": "QlJXSC+IbkwGb2Fb+VzihpYEsKmCI7SRa6hYnTKVH5c0tv4Jbl4kuXCafTBYHdXZD+5kn+9BuigopH/BsEfglQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Host\\source\\repos\\UnimeSearch\\Unime-ProStats\\Unime-ProStats.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Host\\.nuget\\packages\\extended.wpf.toolkit\\4.0.1\\extended.wpf.toolkit.4.0.1.nupkg.sha512"
+    "C:\\Users\\Host\\.nuget\\packages\\extended.wpf.toolkit\\4.0.1\\extended.wpf.toolkit.4.0.1.nupkg.sha512",
+    "C:\\Users\\Host\\.nuget\\packages\\jikandotnet\\1.5.1\\jikandotnet.1.5.1.nupkg.sha512",
+    "C:\\Users\\Host\\.nuget\\packages\\materialdesigncolors\\1.2.8-ci1990\\materialdesigncolors.1.2.8-ci1990.nupkg.sha512",
+    "C:\\Users\\Host\\.nuget\\packages\\materialdesignthemes\\3.2.1-ci1990\\materialdesignthemes.3.2.1-ci1990.nupkg.sha512"
   ],
   "logs": [
     {
